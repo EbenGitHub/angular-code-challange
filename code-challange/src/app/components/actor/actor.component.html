@@ -6,4 +6,13 @@
         <span class="height-label">Height:</span>
         <span class="height">{{actor.height}}</span>
     </div>
+
+    <div class="row gap-05">
+        <span class="bod-label">BOD:</span>
+        <span class="bod">{{actor.birth_year}}</span>
+    </div>
+
+    <button [routerLink]="['/actor', actorId]">
+        Detail
+    </button>
 </div>

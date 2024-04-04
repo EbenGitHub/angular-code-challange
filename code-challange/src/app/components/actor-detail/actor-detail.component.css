@@ -1,0 +1,25 @@
+.wrapper>.row>.height-label,
+.wrapper>.row>.bod-label,
+.wrapper>.row>.name-label,
+.wrapper>.row>.gender-label,
+.wrapper>.row>.mass-label,
+.wrapper>.row>.skin_color-label,
+.wrapper>.row>.eye_color-label,
+.wrapper>.row>.films-label,
+.wrapper>.row>.vehicles-label {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.wrapper>.row>.height,
+.wrapper>.row>.bod,
+.wrapper>.row>.name,
+.wrapper>.row>.gender,
+.wrapper>.row>.mass,
+.wrapper>.row>.skin_color,
+.wrapper>.row>.eye_color,
+.wrapper>.row>.films,
+.wrapper>.row>.vehicles {
+    font-weight: 900;
+    font-size: 1rem;
+}

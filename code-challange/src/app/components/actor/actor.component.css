@@ -17,12 +17,25 @@
     font-size: 1.5rem;
 }
 
-.wrapper>.row>.height-label {
+.wrapper>.row>.height-label,
+.wrapper>.row>.bod-label {
     font-weight: 300;
     font-size: 1rem;
 }
 
-.wrapper>.row>.height {
+.wrapper>.row>.height,
+.wrapper>.row>.bod {
     font-weight: 900;
     font-size: 1rem;
+}
+
+.wrapper>button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
 }

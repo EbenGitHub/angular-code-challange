@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
-import { ActorsResponse, PaginationParams } from '../../types';
+import { ActorDetailsResponse, ActorsResponse, PaginationParams } from '../../types';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +14,9 @@ export class ActorsService {
 
   getActors = (url: string, params: PaginationParams): Observable<ActorsResponse> => {
     return this.apiService.get(url, { params, responseType: 'json' });
+  }
+
+  getActorDetail = (url: string, actorId: number): Observable<ActorDetailsResponse> => {
+    return this.apiService.get(url + `/${actorId}`, { responseType: 'json' });
   }
 }
