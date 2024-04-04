@@ -1,5 +1,15 @@
-<div class="column wrapper">
-    <div class="row wrapper gap-1 space-between">
-        <app-actor *ngFor=" let actor of actors" [actor]="actor"></app-actor>
+<div class="column gap-1">
+    <!-- ACTORS -->
+    <div *ngIf="loading == true; else content" class="row wrapper gap-1 justify-start">
+        Loading...
     </div>
+
+    <ng-template #content>
+        <div class="row wrapper gap-1 justify-start">
+            <app-actor *ngFor="let actor of actors" [actor]="actor"></app-actor>
+        </div>
+    </ng-template>
+
+    <!-- PAGINATION -->
+    <p-paginator [rows]="10" [totalRecords]="totalRecords" (onPageChange)="onPageChange($event)"></p-paginator>
 </div>
