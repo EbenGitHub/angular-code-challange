@@ -37,8 +37,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-
-Instruction
+##
+# Instruction
 
 Contains Angular code challenge for internship applicants to Mereb Technologies. Please carefully follow the instructions given below.
 
@@ -67,8 +67,8 @@ Your task is to create angular application and fetch a list of actors with the f
 
 
 
-
-What is done.
+##
+# What is done.
 
 1. Fetch the product data from the following API endpoint: https://swapi.dev/api/people using angular http module
 
