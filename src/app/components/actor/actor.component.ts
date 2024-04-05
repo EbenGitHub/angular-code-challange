@@ -13,5 +13,10 @@ export class ActorComponent {
   constructor() { }
   @Input() actor!: Actor;
 
-  actorId = this.actor?.url.split('/').filter(Boolean).pop();
+  actorId: string | undefined;
+
+
+  ngOnInit(): void {
+    this.actorId = this.actor?.url.split('/').filter(Boolean).pop()
+  }
 }
