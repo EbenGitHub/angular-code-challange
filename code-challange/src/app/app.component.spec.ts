@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('code-challange');
   });
 
-  it('should render title', () => {
+  it('should render footer', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, code-challange');
+    expect(compiled.querySelector('footer')?.textContent).toContain('Copyright 2024');
   });
 });

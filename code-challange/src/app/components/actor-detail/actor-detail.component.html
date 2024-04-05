@@ -2,8 +2,8 @@
     <h2 class="title">{{actor?.name}} Detail</h2>
 
     <div class="row gap-05">
-        <span class="height-label">Name:</span>
-        <span class="height">{{actor?.name}}</span>
+        <span class="name-label">Name:</span>
+        <span class="name">{{actor?.name}}</span>
     </div>
 
     <div class="row gap-05">
@@ -12,39 +12,39 @@
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">BOD:</span>
-        <span class="height">{{actor?.birth_year}}</span>
+        <span class="bod-label">BOD:</span>
+        <span class="bod">{{actor?.birth_year}}</span>
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">Gender:</span>
-        <span class="height">{{actor?.gender}}</span>
+        <span class="gender-label">Gender:</span>
+        <span class="gender">{{actor?.gender}}</span>
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">Mass:</span>
-        <span class="height">{{actor?.mass}}</span>
+        <span class="mass-label">Mass:</span>
+        <span class="mass">{{actor?.mass}}</span>
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">Skin Color:</span>
-        <span class="height">{{actor?.skin_color}}</span>
+        <span class="skin_color">Skin Color:</span>
+        <span class="skin_color">{{actor?.skin_color}}</span>
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">Eye Color:</span>
-        <span class="height">{{actor?.eye_color}}</span>
+        <span class="eye_color">Eye Color:</span>
+        <span class="eye_color">{{actor?.eye_color}}</span>
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">Films:</span>
+        <span class="films-label">Films:</span>
         <div>
             <li *ngFor="let film of actor?.films">{{film}}</li>
         </div>
     </div>
 
     <div class="row gap-05">
-        <span class="height-label">Vehicles:</span>
+        <span class="vehicles">Vehicles:</span>
         <div>
             <li *ngFor="let film of actor?.vehicles">{{film}}</li>
         </div>

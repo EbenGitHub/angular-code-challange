@@ -13,7 +13,5 @@ export class ActorComponent {
   constructor() { }
   @Input() actor!: Actor;
 
-  get actorId() {
-    return this.actor.url.split('/').filter(Boolean).pop();
-  }
+  actorId = this.actor?.url.split('/').filter(Boolean).pop();
 }

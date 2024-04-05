@@ -5,7 +5,7 @@ import { ActorDetailComponent } from './components/actor-detail/actor-detail.com
 
 export const routes: Routes = [
     {
-        title: 'Actors',
+        title: 'code-challange',
         path: '',
         component: HomeComponent
     },
