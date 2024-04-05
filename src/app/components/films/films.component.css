@@ -1,0 +1,11 @@
+.film-bg {
+    background-color: #f8f9fa;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+
+}

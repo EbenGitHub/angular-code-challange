@@ -1,0 +1,25 @@
+<div class="column gap-1 wrapper film-bg">
+    <div *ngIf="loading == true; else content" class="row wrapper gap-1 justify-start">
+        Loading...
+    </div>
+
+    <ng-template #content>
+        <!-- <img src="assets/actors-pic.jpg" alt=""> -->
+        <h2 class="title">{{film?.title}}</h2>
+
+        <div class="row gap-05">
+            <span class="height-label">Director:</span>
+            <span class="height">{{film?.director}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="bod-label">Producer:</span>
+            <span class="bod">{{film?.producer}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="bod-label">Release Date:</span>
+            <span class="bod">{{film?.release_date}}</span>
+        </div>
+    </ng-template>
+</div>

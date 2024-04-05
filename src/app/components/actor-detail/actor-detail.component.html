@@ -1,52 +1,52 @@
 <div class="column gap-1 wrapper">
-    <h2 class="title">{{actor?.name}} Detail</h2>
-
-    <div class="row gap-05">
-        <span class="name-label">Name:</span>
-        <span class="name">{{actor?.name}}</span>
+    <div *ngIf="loading == true; else content" class="row wrapper gap-1 justify-start">
+        Loading...
     </div>
 
-    <div class="row gap-05">
-        <span class="height-label">Height:</span>
-        <span class="height">{{actor?.height}}</span>
-    </div>
+    <ng-template #content>
+        <h2 class="title">{{actor?.name}} Detail</h2>
 
-    <div class="row gap-05">
-        <span class="bod-label">BOD:</span>
-        <span class="bod">{{actor?.birth_year}}</span>
-    </div>
-
-    <div class="row gap-05">
-        <span class="gender-label">Gender:</span>
-        <span class="gender">{{actor?.gender}}</span>
-    </div>
-
-    <div class="row gap-05">
-        <span class="mass-label">Mass:</span>
-        <span class="mass">{{actor?.mass}}</span>
-    </div>
-
-    <div class="row gap-05">
-        <span class="skin_color">Skin Color:</span>
-        <span class="skin_color">{{actor?.skin_color}}</span>
-    </div>
-
-    <div class="row gap-05">
-        <span class="eye_color">Eye Color:</span>
-        <span class="eye_color">{{actor?.eye_color}}</span>
-    </div>
-
-    <div class="row gap-05">
-        <span class="films-label">Films:</span>
-        <div>
-            <li *ngFor="let film of actor?.films">{{film}}</li>
+        <div class="row gap-05">
+            <span class="name-label">Name:</span>
+            <span class="name">{{actor?.name}}</span>
         </div>
-    </div>
 
-    <div class="row gap-05">
-        <span class="vehicles">Vehicles:</span>
-        <div>
-            <li *ngFor="let film of actor?.vehicles">{{film}}</li>
+        <div class="row gap-05">
+            <span class="height-label">Height:</span>
+            <span class="height">{{actor?.height}}</span>
         </div>
-    </div>
+
+        <div class="row gap-05">
+            <span class="bod-label">BOD:</span>
+            <span class="bod">{{actor?.birth_year}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="gender-label">Gender:</span>
+            <span class="gender">{{actor?.gender}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="mass-label">Mass:</span>
+            <span class="mass">{{actor?.mass}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="skin_color-label">Skin Color:</span>
+            <span class="skin_color">{{actor?.skin_color}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="eye_color-label">Eye Color:</span>
+            <span class="eye_color">{{actor?.eye_color}}</span>
+        </div>
+
+        <div class="row gap-05">
+            <span class="films-label">Films:</span>
+            <button (click)="showFilms = !showFilms">{{showFilms ? 'Hide' : 'Show'}}</button>
+        </div>
+        <div class="row gap-1" *ngIf="showFilms">
+            <app-films *ngFor="let film of actor?.films" [film_url]="film"></app-films>
+        </div>
+    </ng-template>
 </div>

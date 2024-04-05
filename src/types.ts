@@ -31,7 +31,6 @@ export type ActorDetails = Actor & {
     eye_color: string;
     gender: string;
     films: string[];
-    vehicles: string[];
 }
 
 export type PaginationParams = {
@@ -50,3 +49,12 @@ export type ActorsResponse = Pagination & {
 }
 
 export type ActorDetailsResponse = ActorDetails;
+
+export type Film = {
+    title: string;
+    director: string;
+    producer: string;
+    release_date: string;
+}
+
+export type FilmResponse = Film;

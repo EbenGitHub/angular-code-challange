@@ -4,11 +4,12 @@ import { ActorComponent } from '../actor/actor.component';
 import { ActorsService } from '../../services/actors.service';
 import { Actor, ActorDetails } from '../../../types';
 import { CommonModule } from '@angular/common';
+import { FilmsComponent } from '../films/films.component';
 
 @Component({
   selector: 'app-actor-detail',
   standalone: true,
-  imports: [ActorComponent, CommonModule],
+  imports: [ActorComponent, CommonModule, FilmsComponent],
   templateUrl: './actor-detail.component.html',
   styleUrl: './actor-detail.component.css'
 })
@@ -21,12 +22,12 @@ export class ActorDetailComponent {
   @Input() actorId!: string;
   actor: ActorDetails | undefined;
   loading = true;
+  showFilms = false;
 
   fetchActorDetail(actorId: number) {
     this.actorService.getActorDetail('https://swapi.dev/api/people', actorId).subscribe((actor) => {
       this.actor = actor;
       this.loading = false;
-      console.log(this.actor);
     });
 
   }
