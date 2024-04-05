@@ -29,7 +29,6 @@ export class ActorDetailComponent {
       this.actor = actor;
       this.loading = false;
     });
-
   }
 
   ngOnInit(): void {
