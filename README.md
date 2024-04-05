@@ -90,6 +90,6 @@ What is done.
 
 10. Write unit tests to ensure that the components behave as expected.
 
-11. Deployment to Vercel App
+11. Deployment to Vercel App.. url https://angular-code-challange.vercel.app/
 
 12. Used Trunk based git branch out system
